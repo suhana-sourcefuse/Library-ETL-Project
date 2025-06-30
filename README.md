@@ -21,45 +21,42 @@ Run an ETL script that:
 ---
 
 ## 🛠️ Setup & Run
+### 1. Clone & set up environment
+git clone `https://github.com/your-username/library-etl-project.git`
 
-1. Clone & set up environment
-
-git clone 'https://github.com/your-username/library-etl-project.git'
 cd library-etl-project
+
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
 
-2. Set Up Python Virtual Environment
-'python3 -m venv venv'
-'source venv/bin/activate'
+### 2. Start MySQL Container
+`docker-compose up -d`
 
-3. Install Dependencies
-pip install -r requirements.txt
-
-4. Start MySQL Container
-'docker-compose up -d'
 This starts MySQL in a Docker container with:
 
-Username: 'root'
-Password: 'root'
-Port: '3306'
+- Username: `root`
+- Password: `root`
+- Port: `3306`
 
-# 🛠️ Execute Project Scripts
-5. Create Tables
-'python3 tables.py'
+## 🛠️ Execute Project Scripts
 
-6. Insert Sample Data
-'python3 insert_data.py'
+### 5. Create Tables
+`python3 tables.py`
 
-7. Run ETL Script
-'python3 etl.py'
+### 6. Insert Sample Data
+`python3 insert_data.py`
 
-✅ This script will:
-Read from library.users and library.transactions
-Aggregate book count per city
-Store result in analytics.city_loan_summary
+### 7. Run ETL Script
+`python3 etl.py`
 
-8. 🧹 Clean Up
+ This script will:
+- Read from `library.users` and `library.transactions`
+- Aggregate book count per city
+- Store result in `analytics.city_loan_summary`
+
+### 8. Clean Up
 Stop the Docker container:
-'docker-compose down'
+`docker-compose down`
