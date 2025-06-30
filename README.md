@@ -24,8 +24,7 @@ Run an ETL script that:
 
 1. Clone & set up environment
 
-```bash
-git clone https://github.com/your-username/library-etl-project.git
+git clone 'https://github.com/your-username/library-etl-project.git'
 cd library-etl-project
 python3 -m venv venv
 source venv/bin/activate
