@@ -20,19 +20,6 @@ Run an ETL script that:
 
 ---
 
-## 📁 Project Structure
-
-library-etl-project/
-├── docker-compose.yml # MySQL setup
-├── create_tables.py # Creates users & transactions tables
-├── insert_data.py # Populates users & transactions
-├── etl.py # ETL pipeline to analytics DB
-├── requirements.txt # Python dependencies
-├── .gitignore
-└── README.md
-
----
-
 ## 🛠️ Setup & Run
 
 ### 1. Clone & set up environment
@@ -46,16 +33,16 @@ pip install -r requirements.txt
 
 ---
 
-### 2. Set Up Python Virtual Environment
+#### 2. Set Up Python Virtual Environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 
-### 3. Install Dependencies
+##### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 
-### 4. Start MySQL Container
+###### 4. Start MySQL Container
 ```bash
 docker-compose up -d
 This starts MySQL in a Docker container with:
@@ -66,16 +53,16 @@ Password: root
 
 Port: 3306
 
-### 🛠️ Execute Project Scripts
-### 5. Create Tables
+# 🛠️ Execute Project Scripts
+####### 5. Create Tables
 ```bash
 python3 tables.py
 
-### 6. Insert Sample Data
+######## 6. Insert Sample Data
 ```bash
 python3 insert_data.py
 
-### 7. Run ETL Script
+######### 7. Run ETL Script
 ```bash
 python3 etl.py
 
@@ -87,7 +74,7 @@ Aggregate book count per city
 
 Store result in analytics.city_loan_summary
 
-### 8. 🧹 Clean Up
+########## 8. 🧹 Clean Up
 Stop the Docker container:
 ```bash
 docker-compose down
